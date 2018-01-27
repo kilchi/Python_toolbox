@@ -15,7 +15,7 @@ import datetime
 
 
 
-book = "/users/yp6ir/anaconda3/Kyoto_temp_plot2.xlsx"
+book = "/users/Aki/anaconda3/Kyoto_temp_plot2.xlsx"
 
 sheet = "test_plot"  # 読み込むシートの名前
 EXL = pd.ExcelFile(book)  # xlsxを開く
