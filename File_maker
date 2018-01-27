@@ -1,0 +1,37 @@
+"""
+author: Aki
+"""
+
+import os
+
+
+train_dir = 'train_pic'
+test_dir = 'test_pic'
+
+if not os.path.exists('c:/users/Aki/anaconda3/train_pic'):
+   os.mkdir('c:/users/Aki/anaconda3/train_pic')
+
+
+if not os.path.exists('c:/users/Aki/anaconda3/test_pic'):
+   os.mkdir('c:/users/Aki/anaconda3/test_pic')
+
+
+F_dic = {}
+
+with open('c:/users/Aki/anaconda3/y_labels.txt') as fp:
+    for line in fp:
+        line = line.rstrip()
+        cols = line.split()
+
+        assert len(cols) == 3
+
+        start = int(cols[0])
+        end = int(cols[1])
+        name = cols[2]
+
+        F_dic[name] = (start, end)
+
+
+for name in F_dic:
+    os.mkdir(os.path.join('c:/users/Aki/anaconda3/train_pic', name))
+    os.mkdir(os.path.join('c:/users/Aki/anaconda3/test_pic', name))
