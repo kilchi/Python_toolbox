@@ -1,0 +1,31 @@
+"""
+
+
+@author: Aki
+"""
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+ 
+book = "/users/Aki/anaconda3/test_plot.xlsx"
+sheet = "test_plot"  # 読み込むシートの名前
+EXL = pd.ExcelFile(book)  # xlsxを開く
+Data = EXL.parse(sheet) # データフレームとして読込
+
+print(Data)
+df = pd.DataFrame(EXL.parse(sheet))
+print(df.mean())
+
+print(df.max())
+
+plt.plot(df)
+plt.legend(['Kyoto','Kochi'])
+plt.title("Temperature_KochiVSKyoto<6/1~9/1>")
+plt.xlabel("M/D")
+plt.ylabel("T")
+plt.show()
+
+
+df.hist()
+df.plot(kind='box')
