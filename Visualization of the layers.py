@@ -2,7 +2,7 @@
 """
 Created on Sat Feb  3 18:26:50 2018
 
-@author: yp6ir
+@author: Aki
 """
 
 import os
