@@ -1,0 +1,35 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Mar 17 12:35:30 2018
+
+@author: Aki
+"""
+
+
+
+import os
+import shutil
+
+os.chdir(r"C:\Users\Aki\Anaconda3")
+#os.mkdir(r"C:\Users\Aki\Anaconda3\0317_1")
+TRAIN_DIR = "0317"
+#A = 0
+file = ".jpg"
+
+#os.chdir(r"C:\Users\Aki\Anaconda3\0317")
+list_x = os.listdir(r"C:\Users\Aki\Anaconda3\0317")
+#for file in os.listdir(TRAIN_DIR):
+for i in range(len(list_x)):
+    
+        shutil.copy(r"C:\Users\Aki\Anaconda3\0317\{0:01d}".format(i*2) + ".jpg",r"C:\Users\Aki\Anaconda3\0317_1")
+        
+        
+        
+        #ValueError: Unknown format code 'd' for object of type 'str'
+        #shutil.copy(r"C:\Users\Aki\Anaconda3\0317\"{0:01d}".format(i) + ".jpg",r"C:\Users\Aki\Anaconda3\0317_1")
+        
+        #AttributeError: 'str' object has no attribute 'str'
+        #shutil.copy(r"C:\Users\Aki\Anaconda3\0317\"{0:01d}".str(i) + ".jpg",r"C:\Users\Aki\Anaconda3\0317_1")
+          
+                
+        #A += 2
